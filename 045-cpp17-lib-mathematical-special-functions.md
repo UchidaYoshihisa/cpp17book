@@ -220,7 +220,7 @@ $$
   B(x, y) =
   \frac{ \Gamma(x) \, \Gamma(y) }
        { \Gamma(x+y) },
-       \quad \mbox{for $x > 0$,\, $y > 0$}
+       \quad \mbox{for $x > 0$, $y > 0$}
 $$
 
 $x$をx、$y$をyとする。
