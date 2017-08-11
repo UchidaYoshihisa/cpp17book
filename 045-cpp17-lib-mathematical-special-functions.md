@@ -399,13 +399,13 @@ $$
   \displaystyle
   \frac{\mathsf{J}_\nu(x) \cos \nu\pi - \mathsf{J}_{-\nu}(x)}
        {\sin \nu\pi },
-  & \mbox{for $x \ge 0$ and non-integral $\nu$}
+  & \mbox{for $x \ge 0$, $\nu$ は非整数}
   \\
   \\
   \displaystyle
   \lim_{\mu \rightarrow \nu} \frac{\mathsf{J}_\mu(x) \cos \mu\pi - \mathsf{J}_{-\mu}(x)}
                                 {\sin \mu\pi },
-  & \mbox{for $x \ge 0$ and integral $\nu$}
+  & \mbox{for $x \ge 0$, , $\nu$ は整数}
   \end{array}
   \right.
 $$
@@ -468,14 +468,14 @@ $$
   \frac{\pi}{2}
   \frac{\mathsf{I}_{-\nu}(x) - \mathsf{I}_{\nu}(x)}
        {\sin \nu\pi },
-  & \mbox{for $x \ge 0$ and non-integral $\nu$}
+  & \mbox{for $x \ge 0$, $\nu$ は非整数}
   \\
   \\
   \displaystyle
   \frac{\pi}{2}
   \lim_{\mu \rightarrow \nu} \frac{\mathsf{I}_{-\mu}(x) - \mathsf{I}_{\mu}(x)}
                                   {\sin \mu\pi },
-  & \mbox{for $x \ge 0$ and integral $\nu$}
+  & \mbox{for $x \ge 0$, $\nu$ は整数}
   \end{array}
   \right.
 $$
