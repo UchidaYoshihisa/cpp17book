@@ -45,9 +45,9 @@ long double  laguerrel(unsigned n, long double x);
 戻り値：
 
 $$
-  \mathsf{L}_n(x) =
-  \frac{e^x}{n!} \frac{ \mathsf{d} ^ n}
-		    { \mathsf{d}x ^ n} \, (x^n e^{-x}),
+  L_n(x) =
+  \frac{e^x}{n!} \frac{d ^ n}
+		    {dx ^ n} \, (x^n e^{-x}),
 	   \quad \mbox{for $x \ge 0$}
 $$
 
@@ -69,9 +69,9 @@ long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 戻り値：
 
 $$
-  \mathsf{L}_n^m(x) =
-  (-1)^m \frac{\mathsf{d} ^ m}
-	   {\mathsf{d}x ^ m} \, \mathsf{L}_{n+m}(x),
+  L_n^m(x) =
+  (-1)^m \frac{d ^ m}
+	   {dx ^ m} \, L_{n+m}(x),
 	   \quad \mbox{for $x \ge 0$}
 $$
 
@@ -93,11 +93,11 @@ long double  legendrel(unsigned l, long double x);
 戻り値：
 
 $$
-  \mathsf{P}_\ell(x) =
+  P_\ell(x) =
   \frac{1}
        {2^\ell \, \ell!}
-  \frac{ \mathsf{d} ^ \ell}
-       { \mathsf{d}x ^ \ell} \, (x^2 - 1) ^ \ell,
+  \frac{d ^ \ell}
+       {dx ^ \ell} \, (x^2 - 1) ^ \ell,
 	   \quad \mbox{for $|x| \le 1$}
 $$
 
@@ -119,11 +119,11 @@ long double assoc_legendrel(unsigned l, unsigned m, long double x);
 戻り値：
 
 $$
-  \mathsf{P}_\ell^m(x) =
+  P_\ell^m(x) =
   (1 - x^2) ^ {m/2}
   \:
-  \frac{ \mathsf{d} ^ m}
-       { \mathsf{d}x ^ m} \, \mathsf{P}_\ell(x),
+  \frac{d ^ m}
+       {dx ^ m} \, P_\ell(x),
 	   \quad \mbox{for $|x| \le 1$}
 $$
 
@@ -144,19 +144,19 @@ long double  sph_legendrel(unsigned l, unsigned m, long double theta);
 戻り値：
 
 $$
-  \mathsf{Y}_\ell^m(\theta, 0)
+  Y_\ell^m(\theta, 0)
 $$
 
 このとき、
 
 $$
-  \mathsf{Y}_\ell^m(\theta, \phi) =
+  Y_\ell^m(\theta, \phi) =
   (-1)^m \left[ \frac{(2 \ell + 1)}
                      {4 \pi}
 	        \frac{(\ell - m)!}
 	             {(\ell + m)!}
          \right]^{1/2}
-	 \mathsf{P}_\ell^m
+	 P_\ell^m
 	 ( \cos\theta ) e ^ {i m \phi},
 	   \quad \mbox{for $|m| \le \ell$}
 $$
@@ -193,9 +193,9 @@ long double  hermitel(unsigned n, long double x);
 戻り値：
 
 $$
-  \mathsf{H}_n(x) =
-  (-1)^n e^{x^2} \frac{ \mathsf{d} ^n}
-		      { \mathsf{d}x^n} \, e^{-x^2}
+  H_n(x) =
+  (-1)^n e^{x^2} \frac{d ^n}
+		      {dx^n} \, e^{-x^2}
 \;
 $$
 
@@ -217,7 +217,7 @@ long double betal(long double x, long double y);
 戻り値：
 
 $$
-  \mathsf{B}(x, y) =
+  B(x, y) =
   \frac{ \Gamma(x) \, \Gamma(y) }
        { \Gamma(x+y) },
        \quad \mbox{for $x > 0$,\, $y > 0$}
@@ -239,8 +239,8 @@ long double comp_ellint_1l(long double k);
 戻り値：
 
 $$
-  \mathsf{K}(k) =
-  \mathsf{F}(k, \pi / 2),
+  K(k) =
+  F(k, \pi / 2),
 		      \quad \mbox{for $|k| \le 1$}
 $$
 
@@ -261,8 +261,8 @@ long double comp_ellint_2l(long double k);
 戻り値：
 
 $$
-  \mathsf{E}(k) =
-  \mathsf{E}(k, \pi / 2),
+  E(k) =
+  E(k, \pi / 2),
 \quad \mbox{for $|k| \le 1$}
 $$
 
@@ -283,7 +283,7 @@ long double comp_ellint_3l(long double k, long double nu);
 戻り値：
 
 $$
-  \mathsf{\Pi}(\nu, k) = \mathsf{\Pi}(\nu, k, \pi / 2),
+  \Pi(\nu, k) = \Pi(\nu, k, \pi / 2),
 		\quad \mbox{for $|k| \le 1$}
 $$
 
@@ -304,8 +304,8 @@ long double  ellint_1l(long double k, long double phi);
 戻り値：
 
 $$
-  \mathsf{F}(k, \phi) =
-  \int_0^\phi \! \frac{\mathsf{d}\theta}
+  F(k, \phi) =
+  \int_0^\phi \! \frac{d\theta}
                       {\sqrt{1 - k^2 \sin^2 \theta}},
 	   \quad \mbox{for $|k| \le 1$}
 $$
@@ -326,8 +326,8 @@ long double  ellint_2l(long double k, long double phi);
 戻り値：
 
 $$
-  \mathsf{E}(k, \phi) =
-  \int_0^\phi \! \sqrt{1 - k^2 \sin^2 \theta} \, \mathsf{d}\theta,
+  E(k, \phi) =
+  \int_0^\phi \! \sqrt{1 - k^2 \sin^2 \theta} \, d\theta,
 	   \quad \mbox{for $|k| \le 1$}
 $$
 
@@ -348,8 +348,8 @@ long double  ellint_3l(long double k, long double nu, long double phi);
 戻り値：
 
 $$
-  \mathsf{\Pi}(\nu, k, \phi) =
-  \int_0^\phi \! \frac{ \mathsf{d}\theta }
+  \Pi(\nu, k, \phi) =
+  \int_0^\phi \! \frac{ d\theta }
                       { (1 - \nu \, \sin^2 \theta) \sqrt{1 - k^2 \sin^2 \theta} },
 	   \quad \mbox{for $|k| \le 1$}
 $$
@@ -370,7 +370,7 @@ long double  cyl_bessel_jl(long double nu, long double x);
 戻り値：
 
 $$
-  \mathsf{J}_\nu(x) =
+  J_\nu(x) =
   \sum_{k=0}^\infty \frac{(-1)^k (x/2)^{\nu+2k}}
 			 {k! \: \Gamma(\nu+k+1)},
 	   \quad \mbox{for $x \ge 0$}
@@ -393,17 +393,17 @@ long double  cyl_neumannl(long double nu, long double x);
 戻り値：
 
 $$
-  \mathsf{N}_\nu(x) =
+  N_\nu(x) =
   \left\{
   \begin{array}{cl}
   \displaystyle
-  \frac{\mathsf{J}_\nu(x) \cos \nu\pi - \mathsf{J}_{-\nu}(x)}
+  \frac{J_\nu(x) \cos \nu\pi - J_{-\nu}(x)}
        {\sin \nu\pi },
   & \mbox{for $x \ge 0$ and non-integral $\nu$}
   \\
   \\
   \displaystyle
-  \lim_{\mu \rightarrow \nu} \frac{\mathsf{J}_\mu(x) \cos \mu\pi - \mathsf{J}_{-\mu}(x)}
+  \lim_{\mu \rightarrow \nu} \frac{J_\mu(x) \cos \mu\pi - J_{-\mu}(x)}
                                 {\sin \mu\pi },
   & \mbox{for $x \ge 0$ and integral $\nu$}
   \end{array}
@@ -430,8 +430,8 @@ long double  cyl_bessel_il(long double nu, long double x);
 戻り値：
 
 $$
-  \mathsf{I}_\nu(x) =
-  \mathrm{i}^{-\nu} \mathsf{J}_\nu(\mathrm{i}x)
+  I_\nu(x) =
+  i^{-\nu} J_\nu(ix)
   =
   \sum_{k=0}^\infty \frac{(x/2)^{\nu+2k}}
 			 {k! \: \Gamma(\nu+k+1)},
@@ -457,23 +457,23 @@ long double  cyl_bessel_kl(long double nu, long double x);
 戻り値：
 
 $$
-  \mathsf{K}_\nu(x) =
-  (\pi/2)\mathrm{i}^{\nu+1} (            \mathsf{J}_\nu(\mathrm{i}x)
-			    + \mathrm{i} \mathsf{N}_\nu(\mathrm{i}x)
+  K_\nu(x) =
+  (\pi/2)i^{\nu+1} (            J_\nu(ix)
+			    + i N_\nu(ix)
 			    )
   =
   \left\{
   \begin{array}{cl}
   \displaystyle
   \frac{\pi}{2}
-  \frac{\mathsf{I}_{-\nu}(x) - \mathsf{I}_{\nu}(x)}
+  \frac{I_{-\nu}(x) - I_{\nu}(x)}
        {\sin \nu\pi },
   & \mbox{for $x \ge 0$ and non-integral $\nu$}
   \\
   \\
   \displaystyle
   \frac{\pi}{2}
-  \lim_{\mu \rightarrow \nu} \frac{\mathsf{I}_{-\mu}(x) - \mathsf{I}_{\mu}(x)}
+  \lim_{\mu \rightarrow \nu} \frac{I_{-\mu}(x) - I_{\mu}(x)}
                                   {\sin \mu\pi },
   & \mbox{for $x \ge 0$ and integral $\nu$}
   \end{array}
@@ -500,8 +500,8 @@ long double  sph_bessell(unsigned n, long double x);
 戻り値：
 
 $$
-  \mathsf{j}_n(x) =
-  (\pi/2x)^{1\!/\!2} \mathsf{J}_{n + 1\!/\!2}(x),
+  j_n(x) =
+  (\pi/2x)^{1\!/\!2} J_{n + 1\!/\!2}(x),
 	   \quad \mbox{for $x \ge 0$}
 $$
 
@@ -522,8 +522,8 @@ long double  sph_neumannl(unsigned n, long double x);
 戻り値：
 
 $$
-  \mathsf{n}_n(x) =
-  (\pi/2x)^{1\!/\!2} \mathsf{N}_{n + 1\!/\!2}(x),
+  n_n(x) =
+  (\pi/2x)^{1\!/\!2} N_{n + 1\!/\!2}(x),
 	   \quad \mbox{for $x \ge 0$}
 $$
 
@@ -547,9 +547,9 @@ long double  expintl(long double x);
 戻り値：
 
 $$
-  \mathsf{Ei}(x) =
+  Ei(x) =
   - \int_{-x}^\infty \frac{e^{-t}}
-                          {t     } \, \mathsf{d}t
+                          {t     } \, dt
 \;
 $$
 
@@ -569,7 +569,7 @@ long double  riemann_zetal(long double x);
 戻り値：
 
 $$
-  \mathsf{\zeta}(x) =
+  \zeta(x) =
   \left\{
   \begin{array}{cl}
   \displaystyle
